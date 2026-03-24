@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "labsort"
+version = "0.1.0"
+description = "Lab file organizer — scan, classify, index, and search"
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.0",
+    "rich>=13.0",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+labsort = "labsort.cli:cli"
+
+[tool.setuptools.packages.find]
+include = ["labsort*"]
